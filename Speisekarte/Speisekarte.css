@@ -1,0 +1,407 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #8A5A3C 40%, #704832 80%, #5A3825 100%),
+              url('https://www.transparenttextures.com/patterns/dark-wood.png');
+  background-size: cover; /* Skaliert die Textur auf die Bildschirmgröße */
+  background-blend-mode: multiply; /* Kombiniert den Verlauf und die Textur */
+    color: #F2E8D0; /* Helle Textfarbe für besseren Kontrast */
+    position: relative;
+}
+
+
+
+h1 {
+	position: absolute; 
+	top: 27vh;
+	left: 43vw;
+    font-size: 3vw;
+    color: #F1D4A1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.2vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */
+}
+
+
+p {
+	position: absolute; 
+	top: 40vh;
+	left: 20vw;
+    font-size: 1.2vw;
+    color: #F1D4A1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.2vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */
+}
+
+
+.grauer-kasten {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+    width: 100vw;        /* Breite des Kastens */
+    height: 10vh;       /* Höhe des Kastens */
+    background-color: transparent; /* Graue Hintergrundfarbe */
+	z-index: -1;
+  
+}
+
+.grauer-kasten2 {
+	position: absolute;
+	top: 310%;
+	left: 0%;
+    width: 100vw;        /* Breite des Kastens */
+    height: 50vh;       /* Höhe des Kastens */
+    background-color: #DABEA2; /* Graue Hintergrundfarbe */
+    z-index: -1;
+}
+
+
+#standort {
+  position: absolute;
+  height: auto;
+  top: 325vh;
+   width: 3.5%;
+  left: 50%;
+}
+
+#email {
+ position: absolute;
+  height: auto;
+   width: 7%;
+  top: 325vh;
+  left: 25%;
+}
+
+#telefon {
+ position: absolute;
+ width: 7%;
+  height: auto;
+  top: 325vh;
+  left: 70%;
+}
+
+
+.solid-line {
+    position: fixed;        /* Damit die Linie immer am oberen Rand des Fensters bleibt */
+    top: 10vh;                 /* Setzt die Linie an den oberen Rand */
+    left: 0vw;                /* Setzt die Linie an den linken Rand */
+    width: 100vw;           /* 100% der Breite des Viewports (Fenster) */
+    height: 2px;            /* Die Linie ist 2px dick (du kannst die Dicke ändern) */
+    background-color: #D2B59A; /* Die Linie ist schwarz */
+    z-index: 5;          /* Stellt sicher, dass die Linie oben bleibt */
+}
+
+.solid-line2 {
+    position: absolute;        /* Damit die Linie immer am oberen Rand des Fensters bleibt */
+    top: 310vh;                 /* Setzt die Linie an den oberen Rand */
+    left: 0vw;                /* Setzt die Linie an den linken Rand */
+    width: 100vw;           /* 100% der Breite des Viewports (Fenster) */
+    height: 2px;            /* Die Linie ist 2px dick (du kannst die Dicke ändern) */
+    background-color: #D2B59A; /* Die Linie ist schwarz */
+    z-index: 5;          /* Stellt sicher, dass die Linie oben bleibt */
+}
+
+
+/* Container für die Buttons */
+.button-container {
+	position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+	 z-index: 15;
+}
+
+/* Styling für die Buttons */
+.hover-button {
+	position: fixed;
+    background-color: transparent; /* Grüne Farbe */
+    color: #F1D4A1;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2vw;
+    margin: 6px 2px;
+    cursor: pointer;
+    border-radius: 2vw;
+	transition: color 0.3s ease, background-color 0.3s ease;
+	 position: absolute; /* Positionieren der Buttons relativ zum Container */
+	 z-index: 15;
+}
+
+/* Positionierungen für jeden Button */
+/* Position für Button 1 */
+.hover-button:nth-child(1) {
+	position: absolute;
+	background-color: #D2B59A; /* Zartes Cremeweiß */
+    color: #6E4C2E; /* Dunkler Text für den Button */
+	font-size: 2vw;
+    top: 70vh;
+    left: 4.5vw;
+}
+
+/* Position für Button 2 */
+.hover-button:nth-child(2) {
+	Position: fixed;
+    top: 1vh;
+    left: 57vw;
+}
+
+/* Position für Button 3 */
+.hover-button:nth-child(3) {
+	Position: fixed;
+    top: 1vh;
+    left: 64vw;
+}
+
+/* Position für Button 4 */
+.hover-button:nth-child(4) {
+	Position: fixed;
+    top: 1vh;
+    left: 73vw;
+}
+
+/* Position für Button 5 */
+.hover-button:nth-child(5) {
+	Position: fixed;
+    top: 1vh;
+    left: 79vw;
+}
+
+/* Position für Button 6 */
+.hover-button:nth-child(6) {
+	Position: fixed;
+    top: 1vh;
+    left: 87vw;
+}
+
+/* Hover-Effekt - Wenn die Maus über den Button geht */
+.hover-button:hover {
+    color: black; /* Schriftfarbe wird weiß */
+	background-color: #D2B59A;  /* Eine helle, warme Farbe */
+    transform: scale(1.05);  /* Leichte Vergrößerung für den Hover-Effekt */
+    transition: all 0.3s ease;
+}
+
+
+.facebook-logo {
+	position: absolute;
+	top: 350%;
+	left: 50.7%;
+    width: 2%; /* Größe des Logos */
+    height: 3=5; /* Größe des Logos */
+    margin-right: 10%; /* Abstand zwischen Logo und Text */
+}
+.simple-link {
+    color: black; /* Farbe des Textes */
+    position: absolute; /* Positionierung */
+    top: 355%; /* Abstand von oben */
+    left: 44%; /* Abstand von links */
+    text-decoration: none; /* Kein Unterstreichen */
+}
+#text2 { 
+position: fixed; 
+	top: 6vh;
+	left: 5vw;
+    font-size: 1.2vw;
+    color: #F1D4A1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.2vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */}
+	
+	
+	#text6 { 
+	 position: absolute; 
+	top: 345vh;
+	left: 18vw;
+    font-size: 1vw;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.1vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */
+	font-weight: bold;
+	}
+	
+/* Container für die Bilder */
+.image-container {
+    position: relative; /* Container mit absoluter Positionierung der Kinder */
+    width: 100%; /* Volle Breite des Containers */
+    height: 100vh; /* Höhe des Containers (entsprechend der Höhe des Viewports) */
+    margin-top: 2vh; /* Abstand oben in % der Viewport-Höhe */
+}
+
+/* Stil für jedes Bild */
+.menu-image {
+    width: 30vw; /* Maximale Breite der Bilder in % der Viewport-Breite */
+    height: auto;
+    border-radius: 2vw; /* Abgerundete Ecken in % der Bildbreite */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: absolute; /* Bilder absolut positionieren */
+}
+
+/* Positionen für jedes Bild */
+.menu-image:nth-child(1) {
+    top: 55%; /* Position des ersten Bildes */
+    left: 15%; /* Position des ersten Bildes */
+}
+
+.menu-image:nth-child(2) {
+    top: 55vh; /* Position des zweiten Bildes */
+    left: 55vw; /* Position des zweiten Bildes */
+}
+
+.menu-image:nth-child(3) {
+    top: 105vh; /* Position des dritten Bildes */
+    left: 55vw; /* Position des dritten Bildes */
+}
+
+.menu-image:nth-child(4) {
+    top: 105vh; /* Position des vierten Bildes */
+    left: 15vw; /* Position des vierten Bildes */
+}
+
+.menu-image:nth-child(5) {
+    top: 155vh; /* Position des fünften Bildes */
+    left: 15vw; /* Position des fünften Bildes */
+}
+
+.menu-image:nth-child(6) {
+    top: 155vh; /* Position des sechsten Bildes */
+    left: 55vw; /* Position des sechsten Bildes */
+}
+
+.menu-image:nth-child(7) {
+    top: 205vh; /* Position des siebten Bildes */
+    left: 15vw; /* Position des siebten Bildes */
+}
+
+.menu-image:nth-child(8) {
+    top: 205vh; /* Position des achten Bildes */
+    left: 55vw; /* Position des achten Bildes */
+}
+
+.menu-image:nth-child(9) {
+    top: 255vh; /* Position des neunten Bildes */
+    left: 15vw; /* Position des neunten Bildes */
+}
+
+.menu-image:nth-child(10) {
+    top: 255vh; /* Position des zehnten Bildes */
+    left: 55vw; /* Position des zehnten Bildes */
+}
+
+/* Hover-Effekt für die Bilder */
+.menu-image:hover {
+    transform: scale(1.1); /* Bilder werden leicht vergrößert */
+}
+
+/* Das Modal (Slideshow Container) */
+.modal {
+    display: none; /* Zuerst unsichtbar */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw; /* Die gesamte Breite des Viewports */
+    height: 100vh; /* Die gesamte Höhe des Viewports */
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8); /* Halbtransparenter schwarzer Hintergrund */
+}
+
+/* Das Bild in der Slideshow */
+.modal-content {
+    position: relative;
+    width: 60vw; /* Breite in % der Viewport-Breite */
+    max-width: 200%; /* Maximale Breite */
+    margin: auto;
+	z-index: 6;
+	  display: flex; /* Flexbox aktivieren, um die Inhalte zu zentrieren */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+}
+
+.modal-image {
+    width: 120%;
+    height: auto;
+    border-radius: 2vw; /* Abgerundete Ecken relativ zur Breite */
+	
+}
+
+/* Schließen-Button */
+.close {
+    position: absolute;
+    top: 5vh; /* Abstand oben in % der Viewport-Höhe */
+    right: 5vw; /* Abstand von rechts in % der Viewport-Breite */
+    color: white;
+    font-size: 5vw; /* Schriftgröße in % der Viewport-Breite */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f1d4a1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Vorwärts- und Rückwärts-Button */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 2vw; /* Polsterung in % der Viewport-Breite */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 4vw; /* Schriftgröße in % der Viewport-Breite */
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3vw 0 0 3vw; /* Abgerundete Ecken relativ zur Breite */
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3vw 3vw 0; /* Abgerundete Ecken relativ zur Breite */
+}
+
+/* Position für die Vorwärts- und Rückwärts-Buttons */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Wenn das Modal geöffnet wird, verschiebt sich der z-index der Linien und Hover-Buttons nach hinten */
+.modal-open .solid-line, 
+.modal-open .solid-line2, 
+.modal-open .button-container {
+    z-index: -1; /* Setzt den z-index der Linien und Buttons nach hinten */
+}
+
+/* Sicherstellen, dass das Modal immer oben ist */
+.modal-open .modal,
+.modal-open .modal-content {
+    z-index: 10; /* Stellt sicher, dass das Modal im Vordergrund bleibt */
+}

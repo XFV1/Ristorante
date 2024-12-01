@@ -1,0 +1,242 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #8A5A3C 40%, #704832 80%, #5A3825 100%),
+              url('https://www.transparenttextures.com/patterns/dark-wood.png');
+  background-size: cover; /* Skaliert die Textur auf die Bildschirmgröße */
+  background-blend-mode: multiply; /* Kombiniert den Verlauf und die Textur */
+    color: #F2E8D0; /* Helle Textfarbe für besseren Kontrast */
+    position: relative;
+}
+
+
+
+h1 {
+	position: absolute; 
+	top: 27vh;
+	left: 40vw;
+    font-size: 3vw;
+    color: #F1D4A1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.2vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */
+}
+
+.simple-link {
+    color: black; /* Farbe des Textes */
+    position: absolute; /* Positionierung */
+    top: 840%; /* Abstand von oben */
+    left: 44.5%; /* Abstand von links */
+    text-decoration: none; /* Kein Unterstreichen */
+}
+
+
+.facebook-logo {
+	position: absolute;
+	top: 835%;
+	left: 50.8%;
+    width: 2%; /* Größe des Logos */
+    height: 3=5; /* Größe des Logos */
+    margin-right: 10%; /* Abstand zwischen Logo und Text */
+}
+p {
+	position: absolute; 
+	top: 40vh;
+	left: 5vw;
+    font-size: 0.7vw;
+    color: E8E8E8;
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	 letter-spacing: 0.2vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 3vh;      /* Etwas mehr Abstand zwischen den Zeilen */
+}
+
+
+.grauer-kasten {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+    width: 100vw;        /* Breite des Kastens */
+    height: 10vh;       /* Höhe des Kastens */
+    background-color: transparent; /* Graue Hintergrundfarbe */
+	z-index: -1;
+  
+}
+
+.grauer-kasten2 {
+	position: absolute;
+	top: 800%;
+	left: 0%;
+    width: 100vw;        /* Breite des Kastens */
+    height: 50vh;       /* Höhe des Kastens */
+    background-color: #DABEA2; /* Graue Hintergrundfarbe */
+    z-index: -1;
+}
+
+
+#standort {
+  position: absolute;
+  height: auto;
+  top: 810vh;
+   width: 3.5%;
+  left: 50%;
+}
+
+#email {
+ position: absolute;
+  height: auto;
+   width: 7%;
+  top: 810vh;
+  left: 25%;
+}
+
+#telefon {
+ position: absolute;
+ width: 7%;
+  height: auto;
+  top: 810vh;
+  left: 70%;
+}
+
+
+.solid-line {
+    position: fixed;        /* Damit die Linie immer am oberen Rand des Fensters bleibt */
+    top: 10vh;                 /* Setzt die Linie an den oberen Rand */
+    left: 0vw;                /* Setzt die Linie an den linken Rand */
+    width: 100vw;           /* 100% der Breite des Viewports (Fenster) */
+    height: 2px;            /* Die Linie ist 2px dick (du kannst die Dicke ändern) */
+    background-color: #D2B59A; /* Die Linie ist schwarz */
+    z-index: 5;          /* Stellt sicher, dass die Linie oben bleibt */
+}
+
+.solid-line2 {
+    position: absolute;        /* Damit die Linie immer am oberen Rand des Fensters bleibt */
+    top: 800vh;                 /* Setzt die Linie an den oberen Rand */
+    left: 0vw;                /* Setzt die Linie an den linken Rand */
+    width: 100vw;           /* 100% der Breite des Viewports (Fenster) */
+    height: 2px;            /* Die Linie ist 2px dick (du kannst die Dicke ändern) */
+    background-color: #D2B59A; /* Die Linie ist schwarz */
+    z-index: 5;          /* Stellt sicher, dass die Linie oben bleibt */
+}
+
+
+
+/* Container für die Buttons */
+.button-container {
+	position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+/* Styling für die Buttons */
+.hover-button {
+	position: fixed;
+    background-color: transparent; /* Grüne Farbe */
+    color: #F1D4A1;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2vw;
+    margin: 6px 2px;
+    cursor: pointer;
+    border-radius: 2vw;
+	transition: color 0.3s ease, background-color 0.3s ease;
+	 position: absolute; /* Positionieren der Buttons relativ zum Container */
+}
+
+/* Positionierungen für jeden Button */
+/* Position für Button 1 */
+.hover-button:nth-child(1) {
+	position: absolute;
+	background-color: #D2B59A; /* Zartes Cremeweiß */
+    color: #6E4C2E; /* Dunkler Text für den Button */
+	font-size: 2vw;
+    top: 70vh;
+    left: 4.5vw;
+}
+
+/* Position für Button 2 */
+.hover-button:nth-child(2) {
+	Position: fixed;
+    top: 1vh;
+    left: 57vw;
+}
+
+/* Position für Button 3 */
+.hover-button:nth-child(3) {
+	Position: fixed;
+    top: 1vh;
+    left: 64vw;
+}
+
+/* Position für Button 4 */
+.hover-button:nth-child(4) {
+	Position: fixed;
+    top: 1vh;
+    left: 73vw;
+}
+
+/* Position für Button 5 */
+.hover-button:nth-child(5) {
+	Position: fixed;
+    top: 1vh;
+    left: 79vw;
+}
+
+/* Position für Button 6 */
+.hover-button:nth-child(6) {
+	Position: fixed;
+    top: 1vh;
+    left: 87vw;
+}
+
+/* Hover-Effekt - Wenn die Maus über den Button geht */
+.hover-button:hover {
+    color: black; /* Schriftfarbe wird weiß */
+	background-color: #D2B59A;  /* Eine helle, warme Farbe */
+    transform: scale(1.05);  /* Leichte Vergrößerung für den Hover-Effekt */
+    transition: all 0.3s ease;
+}
+
+
+#text2 { 
+position: fixed; 
+	top: 6vh;
+	left: 5vw;
+    font-size: 1.2vw;
+    color: #F1D4A1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.2vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */}
+	
+	
+	#text6 { 
+	 position: absolute; 
+	top: 825vh;
+	left: 18vw;
+    font-size: 1vw;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.1vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */
+	font-weight: bold;
+	}
+	}
+
+

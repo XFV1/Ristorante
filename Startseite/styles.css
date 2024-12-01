@@ -1,0 +1,552 @@
+ /* Grundlegendes Styling für den Body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #8A5A3C 40%, #704832 80%, #5A3825 100%),
+              url('https://www.transparenttextures.com/patterns/dark-wood.png');
+  background-size: cover; /* Skaliert die Textur auf die Bildschirmgröße */
+  background-blend-mode: multiply; /* Kombiniert den Verlauf und die Textur */
+    color: #F2E8D0; /* Helle Textfarbe für besseren Kontrast */
+    position: relative;
+}
+
+/* Styling für das Bild mit der ID #pizza1 */
+#pizza1 {
+    position: absolute;
+	top: 36vh;
+	left: 49vw;
+    width: 45vw;
+    height: 45vh;
+    object-fit: contain;
+    background-color: transparent;
+}
+
+.content {
+    position: relative;
+    padding: 50px;
+}
+
+/* Licht-Effekt von Pizza */
+.rauch {
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+	
+}
+
+.rauch span {
+    position: fixed;
+    bottom: -10vh;
+    right: -21vw;
+    display: block;
+    margin: 0 6px 50px;
+    min-width: 10px;
+    height: 32vh;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate 12s linear infinite;
+    opacity: 0.6;
+    filter: blur(15px);
+    animation-delay: calc(var(--i) * -0.55s);
+}
+
+
+
+/* Keyframes für die Rauch-Animation */
+@keyframes animate {
+    0% {
+        opacity: 0; /* Rauch startet unsichtbar */
+        transform: translateY(0) scaleX(1); /* Startet am Boden */
+    }
+    10% {
+        opacity: 0.1; /* Rauch beginnt leicht sichtbar zu werden */
+        transform: translateY(-10px) scaleX(1.1); /* Rauch leicht nach oben, etwas breiter */
+    }
+    20% {
+        opacity: 0.2; /* Rauch wird etwas mehr sichtbar */
+        transform: translateY(-30px) scaleX(1.3); /* Weiter nach oben, breiter */
+    }
+    30% {
+        opacity: 0.3; /* Noch sichtbarer */
+        transform: translateY(-50px) scaleX(1.4); /* Weiter nach oben, noch breiter */
+    }
+    40% {
+        opacity: 0.5; /* Rauch wird noch stärker sichtbar */
+        transform: translateY(-70px) scaleX(1.5); /* Weiter nach oben, breiter */
+    }
+    50% {
+        opacity: 0.7; /* Maximale Sichtbarkeit */
+        transform: translateY(-100px) scaleX(1.7); /* Weiter nach oben und breiter */
+    }
+    60% {
+        opacity: 0.8; /* Etwas dunkler, aber noch sichtbar */
+        transform: translateY(-120px) scaleX(1.8); /* Weiter nach oben, noch breiter */
+    }
+    70% {
+        opacity: 0.6; /* Dunkler und breiter */
+        transform: translateY(-140px) scaleX(2); /* Weiter nach oben, breiter */
+    }
+    80% {
+        opacity: 0.4; /* Noch sichtbarer */
+        transform: translateY(-160px) scaleX(2.2); /* Weiter nach oben, breiter */
+    }
+    90% {
+        opacity: 0.3; /* Fast maximal sichtbar */
+        transform: translateY(-180px) scaleX(2.4); /* Weiter nach oben, breiter */
+	}
+    100% {
+        opacity: 0; /* Langsame Ausblendung */
+        transform: translateY(-200px) scaleX(3); /* Am höchsten Punkt und am breitesten */
+    }
+}
+
+
+/* Styling für die Überschrift */
+.headline {
+    background-color: transparent;
+    position: absolute;
+    top: 25%; 
+    right: 77%;
+    transform: translate(50%,-50%);
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 5vw;
+    font-weight: 10vw;
+    color: #F1D4A1;
+    text-shadow: 1px 1px 1px #3B2C29,
+        1px 2px 1px #3B2C29,
+        1px 3px 1px #3B2C29,
+        1px 4px 1px #3B2C29,
+        1px 5px 1px #3B2C29,
+        1px 6px 1px #3B2C29,
+        1px 7px 1px #3B2C29,
+        1px 8px 1px #3B2C29,
+        1px 9px 1px #3B2C29,
+        1px 10px 1px #3B2C29,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+
+
+
+/* Text unter der Überschrift */
+#text1 {
+	position: absolute; 
+	top: 60vh;
+	left: 5vw;
+    font-size: 1.2vw;
+    color: #F1D4A1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.2vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */
+}
+
+#text2 { 
+position: fixed; 
+	top: 6vh;
+	left: 5vw;
+    font-size: 1.2vw;
+    color: #F1D4A1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.2vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */}
+
+#text3 {
+	position: absolute; 
+	top: 125vh;
+	left: 50vw;
+    font-size: 1.5vw;
+    color: #F1D4A1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.1vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */
+	font-weight: bold;
+	}
+
+
+#text4 { 
+     position: absolute; 
+	top: 105vh;
+	left: 5vw;
+    font-size: 1.5vw;
+    color: #F1D4A1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.1vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */
+	font-weight: bold;
+	}
+	
+	#text5 {
+    position: absolute; 
+	top: 200vh;
+	left: 5vw;
+    font-size: 1.5vw;
+    color: #F1D4A1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.1vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */
+	font-weight: bold;
+	}
+	
+	.footer {
+		position: absolute;
+		top: 262%;
+		left: 44%;
+		text-align: center; /* Zentriert den Text */
+    padding: 10px; /* Abstand nach innen */
+    background-color: transparent; /* Dunkler Hintergrund für den Footer */
+    color: black; /* Weiße Schrift */
+    font-size: 14px; /* Schriftgröße */
+    font-family: Arial, sans-serif; /* Schriftart */
+}
+
+.footer-link {
+    color: black; /* Goldene Farbe für den Link */
+    text-decoration: none; /* Keine Unterstreichung */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+    color: black; 
+}
+	
+	#text6 { 
+	 position: absolute; 
+	top: 250vh;
+	left: 18vw;
+    font-size: 1vw;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Schattierung für den Text */
+    margin-top: -2vw; /* Abstand zwischen Überschrift und Text */
+    text-align: left; /* Text zentrieren */
+	font-family: 'Merriweather', serif;
+	 letter-spacing: 0.1vw;   /* Etwas mehr Abstand zwischen den Buchstaben */
+    line-height: 4vh;      /* Etwas mehr Abstand zwischen den Zeilen */
+	font-weight: bold;
+	}
+	}
+
+/* Container für die Buttons */
+.button-container {
+	position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+/* Styling für die Buttons */
+.hover-button {
+	position: fixed;
+    background-color: transparent; /* Grüne Farbe */
+    color: #F1D4A1;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2vw;
+    margin: 6px 2px;
+    cursor: pointer;
+    border-radius: 2vw;
+	transition: color 0.3s ease, background-color 0.3s ease;
+	 position: absolute; /* Positionieren der Buttons relativ zum Container */
+}
+
+/* Positionierungen für jeden Button */
+/* Position für Button 1 */
+.hover-button:nth-child(1) {
+	position: absolute;
+	background-color: #D2B59A; /* Zartes Cremeweiß */
+    color: #6E4C2E; /* Dunkler Text für den Button */
+	font-size: 2vw;
+    top: 70vh;
+    left: 4.5vw;
+}
+
+/* Position für Button 2 */
+.hover-button:nth-child(2) {
+	Position: fixed;
+    top: 1vh;
+    left: 57vw;
+}
+
+/* Position für Button 3 */
+.hover-button:nth-child(3) {
+	Position: fixed;
+    top: 1vh;
+    left: 64vw;
+}
+
+/* Position für Button 4 */
+.hover-button:nth-child(4) {
+	Position: fixed;
+    top: 1vh;
+    left: 73vw;
+}
+
+/* Position für Button 5 */
+.hover-button:nth-child(5) {
+	Position: fixed;
+    top: 1vh;
+    left: 79vw;
+}
+
+/* Position für Button 6 */
+.hover-button:nth-child(6) {
+	Position: fixed;
+    top: 1vh;
+    left: 87vw;
+}
+
+/* Hover-Effekt - Wenn die Maus über den Button geht */
+.hover-button:hover {
+    color: black; /* Schriftfarbe wird weiß */
+	background-color: #D2B59A;  /* Eine helle, warme Farbe */
+    transform: scale(1.05);  /* Leichte Vergrößerung für den Hover-Effekt */
+    transition: all 0.3s ease;
+}
+
+
+
+  /* Tomaten-Bild */
+#tomate {
+  position: absolute;
+  max-width: 3vw; /* Maximale Breite für alle Bilder */
+  height: auto;
+  top: 25%;  /* Position von oben */
+  left: 60%; /* Position von links */
+  transform: rotate(-15deg); /* Leicht gedreht */
+  z-index: 2;  /* Über anderen Objekten sichtbar */
+  pointer-events: none;
+
+}
+
+#tomate2 {
+
+  position: absolute;
+  max-width: 2vw; /* Maximale Breite für alle Bilder */
+  height: auto;
+  top: 30%;  /* Position von oben */
+  left: 85%; /* Position von links */
+  transform: rotate(-15deg); /* Leicht gedreht */
+  z-index: 2;  /* Über anderen Objekten sichtbar */
+   pointer-events: none;
+}
+
+
+/* Gewürz-Bild */
+#gewürz {  
+  position: absolute;
+  max-width: 3vw; /* Maximale Breite für alle Bilder */
+  height: auto;
+  top: -10%;
+  left: -10%;
+  transform: rotate(10deg);
+  z-index: 3; /* Höher als Tomate */
+   pointer-events: none;
+      animation: growShrink 2.1s ease-in-out forwards;
+}
+
+#gewürz2 {  
+  position: absolute;
+  max-width: 3vw; /* Maximale Breite für alle Bilder */
+  height: auto;
+  top: 35%;
+  left: 80%;
+  transform: rotate(10deg);
+  z-index: 3; /* Höher als Tomate */
+  transform: rotate(145deg);
+     animation: growShrink 2s ease-in-out forwards;
+}
+
+/* Blatt-Bild */
+#blatt {
+  position: absolute;
+  max-width: 3vw; /* Maximale Breite für alle Bilder */
+  height: auto;
+  top: 35%;
+  left: 58%;
+  transform: rotate(-10deg);
+  z-index: 1; /* Unten, unter anderen Elementen */
+     animation: growShrink 2s ease-in-out forwards;
+}
+
+
+#blatt2 {
+  position: absolute;
+  max-width: 4vw; /* Maximale Breite für alle Bilder */
+  height: auto;
+  top: 25%;
+  left: 64%;
+  transform: rotate(-10deg);
+  z-index: 1; /* Unten, unter anderen Elementen */
+     animation: growShrink 1.8s ease-in-out forwards;
+}
+
+
+#blatt3 {
+  position: absolute;
+  max-width: 3vw; /* Maximale Breite für alle Bilder */
+  height: auto;
+  top: 25%;
+  left: 75%;
+  transform: rotate(-10deg);
+  z-index: 1; /* Unten, unter anderen Elementen */
+     animation: growShrink 2.2s ease-in-out forwards;
+}
+	 
+
+/* Pilz-Bild */
+#pilz {
+  position: absolute;
+  max-width: 3.6vw; /* Maximale Breite für alle Bilder */
+  height: auto;
+  top: 30%;
+  left: 70%;
+  transform: rotate(45deg);
+  z-index: 4; /* Ganz oben */
+     animation: growShrink 1.6s ease-in-out forwards;
+}
+
+#pilz2 {
+  position: absolute;
+  max-width: 3vw; /* Maximale Breite für alle Bilder */
+  height: auto;
+  top: 40%;
+  left: 84%;
+  transform: rotate(185deg);
+  z-index: 4; /* Ganz oben */
+     animation: growShrink 2s ease-in-out forwards;
+}
+
+#echtgewürz {
+  position: absolute;
+  max-width: 3vw; /* Maximale Breite für alle Bilder */
+  height: auto;
+  top: 30%;
+  left: 55%;
+  transform: rotate(120deg);
+  z-index: 4; /* Ganz oben */
+     animation: growShrink 2.3s ease-in-out forwards;
+}
+
+#echtgewürz2 {
+  position: absolute;
+  max-width: 3vw; /* Maximale Breite für alle Bilder */
+  height: auto;
+  top: 30%;
+  left: 65%;
+  transform: rotate(185deg);
+  z-index: 4; /* Ganz oben */
+     animation: growShrink 2s ease-in-out forwards;
+}
+
+#echtgewürz3 {
+  position: absolute;
+  max-width: 3vw; /* Maximale Breite für alle Bilder */
+  height: auto;
+  top: 25%;
+  left: 80%;
+  transform: rotate(270deg);
+  z-index: 4; /* Ganz oben */
+     animation: growShrink 1.5s ease-in-out forwards;
+}
+
+
+
+.solid-line {
+    position: fixed;        /* Damit die Linie immer am oberen Rand des Fensters bleibt */
+    top: 10vh;                 /* Setzt die Linie an den oberen Rand */
+    left: 0vw;                /* Setzt die Linie an den linken Rand */
+    width: 100vw;           /* 100% der Breite des Viewports (Fenster) */
+    height: 2px;            /* Die Linie ist 2px dick (du kannst die Dicke ändern) */
+    background-color: #D2B59A; /* Die Linie ist schwarz */
+    z-index: 5;          /* Stellt sicher, dass die Linie oben bleibt */
+}
+
+.solid-line2 {
+    position: absolute;        /* Damit die Linie immer am oberen Rand des Fensters bleibt */
+    top: 220vh;                 /* Setzt die Linie an den oberen Rand */
+    left: 0vw;                /* Setzt die Linie an den linken Rand */
+    width: 100vw;           /* 100% der Breite des Viewports (Fenster) */
+    height: 2px;            /* Die Linie ist 2px dick (du kannst die Dicke ändern) */
+    background-color: #D2B59A; /* Die Linie ist schwarz */
+    z-index: 5;          /* Stellt sicher, dass die Linie oben bleibt */
+}
+
+#standort {
+  position: absolute;
+  height: auto;
+  top: 235vh;
+   width: 3.5%;
+  left: 50%;
+}
+
+#email {
+ position: absolute;
+  height: auto;
+   width: 7%;
+  top: 235vh;
+  left: 25%;
+}
+
+#telefon {
+ position: absolute;
+ width: 7%;
+  height: auto;
+  top: 235vh;
+  left: 70%;
+}
+
+.grauer-kasten {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+    width: 100vw;        /* Breite des Kastens */
+    height: 10vh;       /* Höhe des Kastens */
+    background-color: transparent; /* Graue Hintergrundfarbe */
+	z-index: -1;
+  
+}
+
+.grauer-kasten2 {
+	position: absolute;
+	top: 220%;
+	left: 0%;
+    width: 100vw;        /* Breite des Kastens */
+    height: 50vh;       /* Höhe des Kastens */
+    background-color: #DABEA2; /* Graue Hintergrundfarbe */
+    z-index: -1;
+}
+
+.facebook-logo {
+	position: absolute;
+	top: 260%;
+	left: 50.8%;
+    width: 2%; /* Größe des Logos */
+    height: 3=5; /* Größe des Logos */
+    margin-right: 10%; /* Abstand zwischen Logo und Text */
+}
